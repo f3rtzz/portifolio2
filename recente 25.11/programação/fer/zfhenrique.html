@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Para Namorar Comigo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/b3/52/af/b352af71495bad54d7bbcf6dc086afbd.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="radio"] {
+            display: none;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        .bola{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro Para Namorar Comigo</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade" required>
+
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso" required>
+
+            <input type="submit" value="Enviar">
+
+            <fieldset>
+                <label>Estado Civil:</label>
+                <button type="button" id="Solteira-button" oneClick="marcarCasada"()>Solteira</buton>
+                <button type="button" id="casada-button" onclick="marcarCasada()">Casada</button>
+                
+                <script>
+                    function marcarSolteira() {
+                        document.getElementById('casada-button').class.classList.remove('selecionado')
+                        document.getElementById('casada-button').classList.remove('selecionado');
+                    }
+                
+                    function marcarCasada() {
+                        document.getElementById('SOLTEIRA-button')classList.remove('selecionado')
+                        document.getElementById('solteira-button').classList.remove('selecionado');
+                    }
+                    
+                    
+                </script>
+                
+            </fieldset>            
+            </div>
+            
+            </form>
+        </form>
+    </div>
+</body>
+</html>

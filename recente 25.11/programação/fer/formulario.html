@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Formulario de Cadastro </title>
+        
+        <script>
+
+            class Pessoa{
+                constructor(nome,email,idade,comentarios){
+                //Criacao de variaveis e atribuição
+                this.nome = nome
+                this.email = email
+                this.idade = idade
+                this.comentarios = comentarios
+            }
+            //SETS
+            setNomePessoa(novoNome){
+                this.nome = novoNome;
+            }
+            setEmailPessoa(novoEmail){
+                this.email = novoEmail;
+            }
+            setIdadePessoa(novaIdade){
+                this.idade = novaIdade;
+            }
+            setComentariosPessoa(novosComentarios){
+                this.comentarios = novosComentarios;
+            }
+
+            //GETS
+            getNomePessoa(){
+                return this.nome;
+            }
+            getEmailPessoa(){
+                return this.email;
+            }
+            getIdadePessoa(){
+                return this.idade;
+            }
+            getComentariosPessoa(){
+                return this.comentarios;
+            }
+
+        }
+
+        function validarFormulario(){
+            alert("validando formulario");
+            return true;
+
+            var pessoaFormulario = new Pessoa();
+            console.log(pessoaFormulario);
+        }
+
+        </script>
+
+        <style>
+            /* Fundo global */
+            body {
+                background: linear-gradient(to left,black, blue);
+                text-align: center;
+                
+            }
+
+            #titulo_formulario{
+                background-color: rgb(142, 107, 226);
+                color: blue;
+            }
+
+            /* Predefinicao form */
+            #formulario{
+                padding: 2px;
+                text-align: center;
+                color: rgb(250, 250, 250);
+                
+            /* CAIXA CENTRAL */
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: rgba(49, 4, 121, 0.8);
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="formulario">
+            <h1 id="titulo_formulario"> Formulario HTML </h1>
+            <form action="#" onsubmit= "return validarFormulario()">
+                <label for="inputNome">Nome</label>
+                <input type="text" id="inputNome">
+            <br>
+                 <label for="inputEmail">Endereco de email</label>
+                <input type="email" id="inputEmail">
+            <br>
+                <label for="inputIdade">Idade</label>
+                <input type="number" id="inputIdade">
+            <br>
+                <label for="textAreaMSG">Comentarios</label>
+                <textarea name="textAreaMSG" id="textAreaMSG" cols="30" rows="5"></textarea>
+            <br>
+            <!-- BOTAO DE ENVIAR/RESETAR -->
+                <input type="submit" value="Enviar">
+                <input type="reset">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+    <script>
+        // Nome c/ letra maiuscula em classe
+        class Carro{
+            //Métodos
+            Frear(){
+                console.log("Freei");
+            }
+            Acelerar(){
+                console.log("Acelerei");
+            }
+
+            Marcha(){
+            var marchaBotao = prompt("Qual marcha?");
+            console.log("A marcha esta em " + marchaBotao);
+            }
+
+            //Metodo constructor
+            constructor(marca,ano){
+                //Criacao de variaveis e atribuição
+                this.marca = marca
+                this.ano = ano
+            }
+
+            //SETS
+            setMarcaCarro(novaMarca){
+                this.marca = novaMarca;
+            }
+            setAnoCarro(novoAno){
+                this.ano = novoAno;
+            }
+
+            //GETS
+            getMarcaCarro(){
+                return this.marca;
+            }
+            getAnoCarro(){
+                return this.ano;
+            }
+
+        }
+        var objetoCarro = new Carro("Fiat", 2005);
+
+        console.log(objetoCarro.getMarcaCarro());
+        console.log(objetoCarro.getAnoCarro());
+
+        objetoCarro.Acelerar();
+        objetoCarro.Frear();
+
+        objetoCarro.setMarcaCarro("McLaren");
+        objetoCarro.setAnoCarro(1998);
+
+        console.log(objetoCarro.getMarcaCarro());
+        console.log(objetoCarro.getAnoCarro());
+
+    </script>
+</head>
+<body>
+    <button onclick= "objetoCarro.Marcha()">Trocar marcha</button>
+</body>
+</html>

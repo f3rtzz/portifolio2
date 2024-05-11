@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CursoEmVideo</title>
+    <style>
+        body{
+            background-color: blue;
+            color: azure;
+            font: normal 10pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo! Instantâneo!!!<br>
+        ("Live server")</h1>
+    <p> Vamos fazer acontecer!</p>
+    <div id="msg"> Clique em mim</div>
+    <p> Aprendendo a usar o <b>DOM</b> em js!</p>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = document.getElementsByTagName("p")[1]
+
+        window.document.write(`Repetindo: ${p1.innerText}<br>`)
+        p1.style.color = "green"
+        corpo.style.background = "black";
+        window.document.write(p1.innerText);
+
+        /* var z = window.document.getElementById('msg')
+        z.style.background = "green"
+        z.innerText = "oi" */
+        var d = window.document.querySelector('div#msg')
+        d.style.background = "green"
+        </script>
+</body>
+</html>
